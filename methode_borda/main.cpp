@@ -64,31 +64,6 @@ struct participant
 //     }
 // }
 
-int trouverIndiceAvecValeur(int valeur, vector<int> tableau)
-{
-    int indice = 0;
-    for (size_t i = 0; i <= tableau.size() - 1; ++i)
-    {
-        if (tableau[i] != valeur) continue;
-        // cout << " indice : " << tableau[i] << " " << i << endl;
-        indice = i;
-    }
-    return indice;
-}
-
-int trouverMajoriteAbsolue(vector<int> tableau, vector<participant> participants)
-{
-    int majorite = 0;
-    for (size_t i : tableau)
-    {
-        // cout << i << " " << participants.size()/2 << endl;
-        if (i < participants.size() / 2) continue;
-        majorite = trouverIndiceAvecValeur(i, tableau);
-    }
-    // cout << "maj" <<  majorite << endl;
-    return majorite;
-}
-
 int main()
 {
     vector<participant> listeParticipants;
